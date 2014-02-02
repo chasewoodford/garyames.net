@@ -8,6 +8,8 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 sitemap.xml
 *.log
+*.iml
+*.idea
 wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
