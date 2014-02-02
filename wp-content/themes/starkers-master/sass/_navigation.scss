@@ -8,18 +8,18 @@
     width: 300px;
     overflow: hidden;
     display: block;
-    background: url("../wp-content/themes/starkers-master/img/icon-arrow-right.png") no-repeat 97% center #fff;
+    background: url("./img/icon-arrow-right.png") no-repeat 97% center #fff;
     -webkit-box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
     box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
     margin-bottom: 8px;
     padding: 0;
     border-left: 10px solid #fff;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+    -webkit-transition: $transition-quick;
+    -moz-transition: $transition-quick;
+    -o-transition: $transition-quick;
+    -ms-transition: $transition-quick;
+    transition: $transition-quick;
     &:last-child {
       margin-bottom: 0px;
     }
@@ -36,39 +36,39 @@
 
 .ca-content {
   position: relative;
-  padding-left: 20px;
+  padding: 2px 0 0 15px;
   width: auto;
   height: 60px;
 }
 
 .ca-main {
   font-size: 22px;
-  -webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  -ms-transition: all 200ms linear;
-  transition: all 200ms linear;
+  -webkit-transition: $transition-quick;
+  -moz-transition: $transition-quick;
+  -o-transition: $transition-quick;
+  -ms-transition: $transition-quick;
+  transition: $transition-quick;
 }
 
 .ca-sub {
   font-size: 14px;
-  color: #666;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  color: $color-grey-dark;
+  -webkit-transition: $transition-quick;
+  -moz-transition: $transition-quick;
+  -ms-transition: $transition-quick;
+  -o-transition: $transition-quick;
+  transition: $transition-quick;
 }
 
 .ca-menu li:hover, .ca-menu .active {
-  border-color: rgba(0, 0, 0, 0.6);
-  background: url("../wp-content/themes/starkers-master/img/icon-arrow-right.png") no-repeat 97% center #4F4247;
+  border-color: $color-blue-dark;
+  background: url("./img/icon-arrow-right.png") no-repeat 97% center $color-blue-light;
   .ca-main {
-    color: rgba(0, 0, 0, 0.6);
+    color: $color-blue-dark;
     font-size: 14px;
   }
   .ca-sub {
-    color: #fff;
+    color: $color-blue-dark;
     font-size: 22px;
   }
 }

@@ -34,25 +34,25 @@ html {
 
 body {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  background: #9cb8b3;
+  background: $color-grey-light;
   font-weight: 300;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: $color-grey-dark;
   overflow: scroll;
   overflow-x: hidden;
 }
 
 a {
-  color: #06444B;
+  color: $color-blue-dark;
   &:hover {
-    color: #fff;
+    color: $color-green;
     text-decoration: underline;
   }
   &.nav-link {
-    color: #555;
+    color: $color-grey-dark;
     text-decoration: none;
     &:hover {
-      color: rgba(0, 0, 0, 0.6);
+      color: $color-grey-dark;
       text-emphasis: none;
     }
   }
@@ -124,7 +124,7 @@ a {
         display: block;
         position: relative;
         top: 40px;
-        color: rgba(0, 0, 0, 0.6);
+        color: $color-grey-dark;
         font-size: 20px;
         font-weight: 400;
         text-shadow: none;
@@ -135,31 +135,9 @@ a {
 }
 
 p {
-  font-size: 1.2em;
-  line-height: 1.4em;
-  margin-bottom: 20px;
-  &.first-letter:first-letter {
-    color: white;
-    font-size: 2em;
-    font-weight: 700;
-    padding: 10px 5px 10px 0;
-    text-shadow:
-      0 -1px 0 #C9CECE,
-      0 1px 0 #BCC2C1,
-      0 2px 0 #AEB6B5,
-      0 3px 0 #A3ACAB,
-      0 4px 0 #9EA7A6,
-      0 5px 0 #99A2A1,
-      0 6px 0 #96A09F,
-      0 7px 0 #939E9D,
-      0 0 4px rgba(0, 0, 0, 0.05),
-      0 0 1px rgba(0, 0, 0, 0.2),
-      0 1px 3px rgba(0, 0, 0, 0.2),
-      0 2px 5px rgba(0, 0, 0, 0.2),
-      0 10px 10px rgba(0, 0, 0, 0.2),
-      0 10px 10px rgba(0, 0, 0, 0.3);
-    text-transform: uppercase;
-  }
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  margin-bottom: 1.5em;
 }
 
 ul, ol {
@@ -184,8 +162,8 @@ ol.slats li {
     border-bottom: none;
   }
   h3 {
-    font-size: 1.2em;
-    line-height: 1.4em;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
     font-weight: bold;
     &.pagination {
       display: inline;
