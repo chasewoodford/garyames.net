@@ -11,6 +11,11 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+<?php include ('/parts/shared/nav.php') ?>
+
+<div class="lorem mod">
+    <div class="container">
+
 <?php if ( have_posts() ): ?>
 <h2>Category Archive: <?php echo single_cat_title( '', false ); ?></h2>
 <ol>

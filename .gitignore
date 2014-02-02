@@ -10,6 +10,7 @@ sitemap.xml
 *.log
 *.iml
 *.idea
+*.sass-cache
 wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz

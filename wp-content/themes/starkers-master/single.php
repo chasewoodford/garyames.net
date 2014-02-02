@@ -12,22 +12,30 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php include ('/parts/shared/nav.php') ?>
 
-<article>
+    <div class="lorem mod">
+        <div class="container">
 
-	<h2><?php the_title(); ?></h2>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-	<?php the_content(); ?>			
+            <?php the_content(); ?>
 
-	<?php if ( get_the_author_meta( 'description' ) ) : ?>
-	<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-	<h3>About <?php echo get_the_author() ; ?></h3>
-	<?php the_author_meta( 'description' ); ?>
-	<?php endif; ?>
+            <ol class="slats">
+                <li class="group pagination-row">
+                    <h3 class="pagination"><a class="button" href="#">&larr;&nbsp;Previous Article</a></h3>
+                    <h3 class="pagination"><a class="button" href="chapter-one.html">All Articles</a></h3>
+                    <h3 class="pagination"><a class="button" href="campaign-preparation-report.html">Next Article&nbsp;&rarr;</a></h3>
+                </li>
+                <li class="group">
+                    <h3><a href="../">About <?php echo get_the_author() ; ?></a></h3>
+                    <?php if ( get_the_author_meta( 'description' ) ) : ?>
+                    <img class="headshot small" src="../wp-content/themes/starkers-master/img/gary-ames.png">
+                    <p><?php the_author_meta( 'description' ); ?></p>
+                    <?php endif; ?>
 
-	<?php comments_template( '', true ); ?>
+                </li>
+            </ol>
 
-</article>
+        </div>
 <?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
