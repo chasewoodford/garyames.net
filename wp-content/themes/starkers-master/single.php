@@ -17,36 +17,31 @@
     <div class="lorem mod">
         <div class="container">
 
-            <?php
-
-            if(get_field('chapter_number'))
-            {
-                echo '<p>' . get_field('field_name') . '</p>';
-            }else{
-                echo '<p>Error</p>'
-            }
-
-            ?>
-
-            <?php the_content(); ?>
-
-            <ol class="slats">
-                <li class="group pagination-row">
-                    <h3 class="pagination"><a class="button" href="#">&larr;&nbsp;Previous Article</a></h3>
-                    <h3 class="pagination"><a class="button" href="chapter-one.html">All Articles</a></h3>
-                    <h3 class="pagination"><a class="button" href="campaign-preparation-report.html">Next Article&nbsp;&rarr;</a></h3>
-                </li>
-                <li class="group">
-                    <h3><a href="../">About <?php echo get_the_author() ; ?></a></h3>
-                    <?php if ( get_the_author_meta( 'description' ) ) : ?>
-                    <img class="headshot small" src="../wp-content/themes/starkers-master/img/gary-ames.png">
-                    <p><?php the_author_meta( 'description' ); ?></p>
-                    <?php endif; ?>
-
-                </li>
-            </ol>
-
+            <?php $chapterNumber = get_post_meta($post->ID, 'chapter_number', true); ?>
+            <header>
+                <h1><?php echo $chapterNumber; ?> <span><?php echo get_the_title(); ?></span></h1>
+            </header>
         </div>
+
+        <?php the_content(); ?>
+
+        <ol class="slats">
+            <li class="group pagination-row">
+                <h3 class="pagination"><a class="button" href="#">&larr;&nbsp;Previous Article</a></h3>
+                <h3 class="pagination"><a class="button" href="chapter-one.html">All Articles</a></h3>
+                <h3 class="pagination"><a class="button" href="campaign-preparation-report.html">Next Article&nbsp;&rarr;</a></h3>
+            </li>
+            <li class="group">
+                <h3><a href="../">About <?php echo get_the_author() ; ?></a></h3>
+                <?php if ( get_the_author_meta( 'description' ) ) : ?>
+                <img class="headshot small" src="../wp-content/themes/starkers-master/img/gary-ames.png">
+                <p><?php the_author_meta( 'description' ); ?></p>
+                <?php endif; ?>
+
+            </li>
+        </ol>
+
+    </div>
 <?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
