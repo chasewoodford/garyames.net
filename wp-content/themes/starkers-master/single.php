@@ -19,7 +19,7 @@
 
             <?php $chapterNumber = get_post_meta($post->ID, 'chapter_number', true); ?>
             <header>
-<!--                <h1>--><?php //echo $chapterNumber; ?><!-- <span>--><?php //echo get_the_title(); ?><!--</span></h1>-->
+                <h1><?php echo $chapterNumber; ?> <span><?php echo get_the_title(); ?></span></h1>
             </header>
         </div>
 
