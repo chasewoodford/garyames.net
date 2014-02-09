@@ -12,7 +12,6 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php include ('parts/shared/nav.php') ?>
-<?php include ('parts/shared/something.php') ?>
 
 <div class="lorem mod">
     <div class="container">
