@@ -12,7 +12,7 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<?php include ('/parts/shared/nav.php') ?>
+<?php include ('parts/shared/nav.php') ?>
 
     <div class="lorem mod">
         <div class="container">
