@@ -9,7 +9,7 @@
     width: 300px;
     overflow: hidden;
     display: block;
-    background: url("./img/icon-arrow-right.png") no-repeat 97% center #fff;
+    background: url("./img/icon-arrow-right-white.png") no-repeat 97% center white;
     -webkit-box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
     box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
@@ -62,14 +62,14 @@
 }
 
 .ca-menu li:hover, .ca-menu .active {
-  border-color: $color-blue-dark;
-  background: url("./img/icon-arrow-right.png") no-repeat 97% center $color-blue-light;
+  border-color: $color-green;
+  background: url("./img/icon-arrow-right-green.png") no-repeat 97% center white;
   .ca-main {
-    color: $color-blue-dark;
+    color: $color-green;
     font-size: 14px;
   }
   .ca-sub {
-    color: $color-blue-dark;
+    color: $color-grey-dark;
     font-size: 22px;
   }
 }

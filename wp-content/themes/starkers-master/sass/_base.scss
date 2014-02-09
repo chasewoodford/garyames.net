@@ -44,16 +44,16 @@ body {
 }
 
 a {
-  color: $color-blue-dark;
+  color: $color-red;
   &:hover {
     color: $color-green;
     text-decoration: underline;
   }
   &.nav-link {
-    color: $color-grey-dark;
+    color: $color-red;
     text-decoration: none;
     &:hover {
-      color: $color-grey-dark;
+      color: $color-red;
       text-emphasis: none;
     }
   }
@@ -159,7 +159,7 @@ ul, ol {
     li {
       margin: 0 0 10px 0;
       padding: 0 0 10px 0;
-      border-bottom: 1px solid #F5F5F5;
+      border-bottom: 1px solid $color-grey-medium;
       list-style-type: none;
       &:not(:first-child) {
         padding-top: 20px;
@@ -191,14 +191,13 @@ ul, ol {
       }
     }
   }
-
 }
 
 .headshot {
   float: left;
   width: 200px;
   height: 200px;
-  margin: 7px 15px 0 0;
+  margin: 5px 20px 5px 0;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
   &.small {

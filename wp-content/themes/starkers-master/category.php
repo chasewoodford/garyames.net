@@ -18,11 +18,13 @@
 
         <?php global $query_string; query_posts($query_string . "&order=ASC"); ?>
         <?php if ( have_posts() ): ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+        <?php $chapterNumber = get_post_meta($post->ID, 'chapter_number', true); ?>
+
         <header>
-            <h1>Chapter <span><?php echo single_cat_title( '', false ); ?></span></h1>
+            <h1><?php echo $chapterNumber; ?> <span><?php echo single_cat_title( '', false ); ?></span></h1>
         </header>
         <ol class="slats">
-            <?php while ( have_posts() ) : the_post(); ?>
             <li>
                 <article>
                     <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
