@@ -21,7 +21,7 @@
 
 <div class="lorem mod">
     <div class="container">
-    <p><?php the_field('chapter_number'); ?></p>
+
     <?php the_content(); ?>
     <?php comments_template( '', true ); ?>
 

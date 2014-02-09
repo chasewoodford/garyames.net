@@ -17,6 +17,8 @@
     <div class="lorem mod">
         <div class="container">
 
+            <p><?php the_field('chapter_number'); ?></p>
+
             <?php the_content(); ?>
 
             <ol class="slats">
