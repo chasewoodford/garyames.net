@@ -17,7 +17,16 @@
     <div class="lorem mod">
         <div class="container">
 
-            <p><?php the_field('chapter_number'); ?></p>
+            <?php
+
+            if(get_field('chapter_number'))
+            {
+                echo '<p>' . get_field('field_name') . '</p>';
+            }else{
+                echo '<p>Error</p>'
+            }
+
+            ?>
 
             <?php the_content(); ?>
 
