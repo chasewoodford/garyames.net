@@ -22,10 +22,11 @@
 <div class="lorem mod">
     <div class="container">
 
-    <?php the_content(); ?>
-    <?php comments_template( '', true ); ?>
+        <?php the_content(); ?>
+        <?php comments_template( '', true ); ?>
 
-    </div>
+    </div><!-- Close container -->
+</div><!-- Close main content container -->
 
 <?php endwhile; ?>
 

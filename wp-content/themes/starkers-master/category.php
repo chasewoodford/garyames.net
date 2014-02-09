@@ -62,4 +62,7 @@
         <h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
         <?php endif; ?>
 
+    </div><!-- Close container -->
+</div><!-- Close main content container -->
+
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
