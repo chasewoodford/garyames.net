@@ -28,6 +28,7 @@
 
         <ol class="slats">
             <li class="group pagination-row">
+
                 <?php $prev_post = get_previous_post(true,''); $next_post = get_next_post(true,''); ?>
 
                 <?php if (!empty( $prev_post )): ?>
@@ -44,8 +45,10 @@
                     <a class="button" href="<?php echo get_permalink( $next_post->ID ); ?>" title="<?php echo $next_post->post_title; ?>">Next Article&nbsp;&rarr;</a>
                 </h3>
                 <?php endif; ?>
+
             </li>
             <li class="group">
+
                 <h3><a href="<?php echo get_page_link(7); ?>">About Gary Ames</a></h3>
 
                 <?php if ( get_the_author_meta( 'description' ) ) : ?>
