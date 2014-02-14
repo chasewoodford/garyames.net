@@ -21,18 +21,33 @@
             <header>
                 <h1><?php echo $chapterNumber; ?> <span><?php echo get_the_title(); ?></span></h1>
             </header>
+
         </div>
 
         <?php the_content(); ?>
 
         <ol class="slats">
             <li class="group pagination-row">
-                <h3 class="pagination"><a class="button" href="#">&larr;&nbsp;Previous Article</a></h3>
-                <h3 class="pagination"><a class="button" href="chapter-one.html">All Articles</a></h3>
-                <h3 class="pagination"><a class="button" href="campaign-preparation-report.html">Next Article&nbsp;&rarr;</a></h3>
+                <?php $prev_post = get_previous_post(true,''); $next_post = get_next_post(true,''); ?>
+
+                <?php if (!empty( $prev_post )): ?>
+                <h3 class="pagination">
+                    <a class="button" href="<?php echo get_permalink( $prev_post->ID ); ?>" title="<?php echo $prev_post->post_title; ?>">&larr;&nbsp;Previous Article</a>
+                </h3>
+                <?php endif; ?>
+
+                <?php $the_cat = get_the_category(); $category_name = $the_cat[0]->cat_name; $category_link = get_category_link( $the_cat[0]->cat_ID ); ?>
+                <h3 class="pagination"><a class="button" href="<?php echo $category_link; ?>" title="<?php echo $category_name; ?>">All Articles</a></h3>
+
+                <?php if (!empty( $next_post )): ?>
+                <h3 class="pagination">
+                    <a class="button" href="<?php echo get_permalink( $next_post->ID ); ?>" title="<?php echo $next_post->post_title; ?>">Next Article&nbsp;&rarr;</a>
+                </h3>
+                <?php endif; ?>
             </li>
             <li class="group">
-                <h3><a href="../">About <?php echo get_the_author() ; ?></a></h3>
+                <h3><a href="<?php echo get_page_link(7); ?>">About Gary Ames</a></h3>
+
                 <?php if ( get_the_author_meta( 'description' ) ) : ?>
                 <img class="headshot small" src="../wp-content/themes/starkers-master/img/gary-ames.png">
                 <p><?php the_author_meta( 'description' ); ?></p>
