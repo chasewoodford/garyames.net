@@ -9,70 +9,26 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a class="nav-link" href="/advanced-job-search">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter One</h2>
-                        <h3 class="ca-sub">Advanced job search</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/job-fit-and-message">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Two</h2>
-                        <h3 class="ca-sub">Job fit and message</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/campaign-documents">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Three</h2>
-                        <h3 class="ca-sub">Campaign documents</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/getting-job-interviews">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Four</h2>
-                        <h3 class="ca-sub">Getting job interviews</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/succeeding-in-interviews">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Five</h2>
-                        <h3 class="ca-sub">Succeeding in interviews</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/employer-research">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Six</h2>
-                        <h3 class="ca-sub">Employer research</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/miscellaneous-topics">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Seven</h2>
-                        <h3 class="ca-sub">Miscellaneous topics</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/tools-links-forms">
-                    <div class="ca-content">
-                        <h2 class="ca-main">Chapter Eight</h2>
-                        <h3 class="ca-sub">Tools, links, forms</h3>
-                    </div>
-                </a>
-            </li>
+
+            <?php
+            $args = array('orderby' => 'term_group','parent' => 0);
+            $categories = get_categories( $args );
+            $chapterNumber = array('One','Two','Three','Four','Five','Six','Seven','Eight');
+            $i = 0;
+            foreach ( $categories as $category ) {
+                echo
+                    '<li>
+                        <a class="nav-link" href="' . get_category_link( $category->term_id ) . '">
+                            <div class="ca-content">
+                                <h2 class="ca-main">Chapter ' . $chapterNumber[$i++] . '</h2>
+                                <h3 class="ca-sub">' . $category->name . '</h3>
+                            </div>
+                        </a>
+                    </li>'
+                ;
+            }
+            ?>
+
             <li>
                 <a class="nav-link" href="#">
                     <div class="ca-content">
@@ -92,7 +48,3 @@
         </ul>
     </div>
 </aside>
-
-<script type="text/javascript">
-
-</script>
