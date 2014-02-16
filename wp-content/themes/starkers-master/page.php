@@ -18,6 +18,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <?php include ('parts/shared/nav.php') ?>
+<?php //include ('parts/shared/nav-alt.php') ?>
 
 <div class="lorem mod">
     <div class="container">
