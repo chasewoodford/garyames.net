@@ -1,10 +1,6 @@
 .wrap {
   position: relative;
-  -webkit-transition: $transition-quick;
-  -moz-transition: $transition-quick;
-  -ms-transition: $transition-quick;
-  -o-transition: $transition-quick;
-  transition: $transition-quick;
+  @include transition(0.4s border ease-in-out);
 }
 .wrap.active {
   left: 16em;

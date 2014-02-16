@@ -1,6 +1,10 @@
 <?php
 /**
- * The template for displaying Category Archive pages
+ * The main template file
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
@@ -16,7 +20,7 @@
     <div class="lorem mod">
         <div class="container">
 
-            <?php global $query_string; query_posts($query_string . "&order=ASC"); ?>
+            <?php query_posts("order=ASC&cat=2"); ?>
             <?php if ( have_posts() ): ?>
 
                 <!-- Add counter to posts -->
