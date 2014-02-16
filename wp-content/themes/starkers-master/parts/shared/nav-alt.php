@@ -2,7 +2,7 @@
     <div class="container">
 
         <ul>
-            <li><a href="/">About</a></li>
+            <li><a href="/about">About</a></li>
             <?php
             $args = array('orderby' => 'term_group','parent' => 0);
             $categories = get_categories( $args );

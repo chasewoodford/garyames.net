@@ -2,7 +2,7 @@
     <div class="container">
         <ul class="ca-menu">
             <li>
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/about">
                     <div class="ca-content">
                         <h2 class="ca-main">About</h2>
                         <h3 class="ca-sub">Gary Ames</h3>
