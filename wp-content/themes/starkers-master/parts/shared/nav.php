@@ -18,7 +18,7 @@
             ?>
 
             <li>
-                <a href="mailto:GaryAmes@comcast.net">Contact Gary Ames</a>
+                <a href="mailto:gary@garyames.net">Contact Gary Ames</a>
             </li>
         </ul>
     </div>

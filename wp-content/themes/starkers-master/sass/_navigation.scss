@@ -161,26 +161,13 @@
     &:nth-child(10) {
       border-left: 6px solid $color-purple;
       &:before {
-        content: '\f02d';
-        font-size: 2.1em;
-        left: -1.2em;
-        line-height: 1.5;
-      }
-      &:hover, &.active {
-        border-left: 3em solid $color-purple;
-      }
-    }
-
-    &:nth-child(11) {
-      border-left: 6px solid $color-orange;
-      &:before {
         content: '\f003';
         font-size: 2.1em;
         left: -1.2em;
         line-height: 1.5;
       }
       &:hover, &.active {
-        border-left: 3em solid $color-orange;
+        border-left: 3em solid $color-purple;
       }
     }
   }
