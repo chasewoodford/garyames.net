@@ -15,4 +15,4 @@
 	</head>
 	<body <?php body_class(); ?>>
         <div class="wrap" id="wrap">
-            <a href="#menu" class="menu-link">More</a>
+            <a href="#menu" class="menu-link">&nbsp;Menu</a>
