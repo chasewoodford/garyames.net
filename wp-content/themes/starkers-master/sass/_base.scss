@@ -1,45 +1,30 @@
 @import url("http://fonts.googleapis.com/css?family=Merriweather:300,400");
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css");
 
 html {
   height: 100%;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  &:after, &:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+*, *:after, *:before {
+  @include box-sizing(border-box);
 }
 
 .clearfix {
-  &:before {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
+  @include clearfix();
   *zoom: 1;
 }
 
 body {
-  font-family: 'Merriweather', serif;
   background: $color-grey-light;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'Merriweather', serif;
   font-weight: 300;
   font-size: 16px;
   color: $color-grey-dark;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 
 a {
@@ -77,14 +62,14 @@ a {
     white-space: nowrap;
     &:hover {
       border: 1px solid rgba(0, 0, 0, 0.3);
-      box-shadow: 0px 2px 1px rgba(0,0,0,0.1);
+      @include box-shadow(0px 2px 1px rgba(0,0,0,0.1));
     }
     &:active {
       position: relative;
       top: 1px;
       left: 1px;
       border: 1px solid rgba(0, 0, 0, 0.25);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+      @include box-shadow(0px 1px 1px rgba(0, 0, 0, 0.4));
     }
   }
 }
@@ -197,7 +182,7 @@ ul, ol {
   width: 200px;
   height: 200px;
   margin: 5px 20px 5px 0;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  @include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
 
   &.small {
     @extend .headshot;
