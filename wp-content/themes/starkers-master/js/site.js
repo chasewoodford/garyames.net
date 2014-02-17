@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
     });
 
     var path = window.location.href,
-        root = 'http://test.garyames.net/';
+        root = 'http://www.garyames.net/';
 
     if (path === root) {
         $('a[href*="/advanced-job-search"]').parent('li').addClass('active');
