@@ -15,11 +15,11 @@ a.menu-link {
   overflow: hidden;
 }
 .js .oc {
-  width: 16em;
+  width: 266px;
   height: 100%;
   position: absolute;
   top: 0;
-  left: -16em;
+  left: -266px;
 }
 
 .lorem {
@@ -31,7 +31,9 @@ a.menu-link {
     display: none;
   }
   .js .oc {
-    position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
     float: left;
     width: 30%;
     height: 100%;

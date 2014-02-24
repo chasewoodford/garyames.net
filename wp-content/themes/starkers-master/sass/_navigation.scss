@@ -3,8 +3,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 80%;
-  min-width: 300px;
+  width: 75%;
+  min-width: 290px;
   li {
     @include gradient-vertical($startColor: rgba(69,72,77,1), $endColor: rgba(68,68,68,1));
     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), inset 0 -1px 2px rgba(0, 0, 0, 0.2);
@@ -12,8 +12,8 @@
     cursor: pointer;
     font-family: 'Noto Sans', sans-serif;
     font-size: 18px;
-    line-height: 3;
-    padding-left: 1em;
+    line-height: 39px;
+    padding-left: 12px;
     margin: 0 0 5px;
     position: relative;
     cursor: default;
@@ -27,7 +27,6 @@
       font-size: 1.8em;
       line-height: 1.6;
       position: absolute;
-      left: -1.3em;
       top: 0;
     }
 
@@ -42,12 +41,12 @@
     }
 
     &:first-child {
-      border-left: 6px solid $color-blue-light;
+      border-left: 2px solid $color-blue-light;
       &:before {
         content: '\f05a';
-        font-size: 2.1em;
-        left: -1.1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -38px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 3em solid $color-blue-light;
@@ -55,12 +54,12 @@
     }
 
     &:nth-child(2) {
-      border-left: 6px solid $color-red;
+      border-left: 2px solid $color-red;
       &:before {
         content: '1';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 3em solid $color-red;
@@ -68,12 +67,12 @@
     }
 
     &:nth-child(3) {
-      border-left: 6px solid $color-green;
+      border-left: 2px solid $color-green;
       &:before {
         content: '2';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 3em solid $color-green;
@@ -81,12 +80,12 @@
     }
 
     &:nth-child(4) {
-      border-left: 6px solid $color-purple;
+      border-left: 2px solid $color-purple;
       &:before {
         content: '3';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 3em solid $color-purple;
@@ -94,12 +93,12 @@
     }
 
     &:nth-child(5) {
-      border-left: 6px solid $color-orange;
+      border-left: 2px solid $color-orange;
       &:before {
         content: '4';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 3em solid $color-orange;
@@ -107,12 +106,12 @@
     }
 
     &:nth-child(6) {
-      border-left: 6px solid $color-yellow;
+      border-left: 2px solid $color-yellow;
       &:before {
         content: '5';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 50px solid $color-yellow;
@@ -120,12 +119,12 @@
     }
 
     &:nth-child(7) {
-      border-left: 6px solid $color-blue-light;
+      border-left: 2px solid $color-blue-light;
       &:before {
         content: '6';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 50px solid $color-blue-light;
@@ -133,12 +132,12 @@
     }
 
     &:nth-child(8) {
-      border-left: 6px solid $color-red;
+      border-left: 2px solid $color-red;
       &:before {
         content: '7';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 50px solid $color-red;
@@ -146,12 +145,12 @@
     }
 
     &:nth-child(9) {
-      border-left: 6px solid $color-green;
+      border-left: 2px solid $color-green;
       &:before {
         content: '8';
-        font-size: 2.1em;
-        left: -1em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -36px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 50px solid $color-green;
@@ -159,12 +158,12 @@
     }
 
     &:nth-child(10) {
-      border-left: 6px solid $color-purple;
+      border-left: 2px solid $color-purple;
       &:before {
         content: '\f003';
-        font-size: 2.1em;
-        left: -1.2em;
-        line-height: 1.5;
+        font-size: 30px;
+        left: -42px;
+        line-height: 39px;
       }
       &:hover, &.active {
         border-left: 3em solid $color-purple;
