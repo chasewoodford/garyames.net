@@ -14,5 +14,6 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+    <?php include_once("analyticstracking.php") ?>
         <div class="wrap" id="wrap">
             <a href="#menu" class="menu-link">&nbsp;Menu</a>
